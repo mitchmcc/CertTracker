@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>CertTracker Employee</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Is active</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check for active employees</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Employee_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External company employee ID</description>
+        <externalId>true</externalId>
+        <label>Employee ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <description>Employee first name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Employee first name</inlineHelpText>
+        <label>First Name</label>
+        <length>64</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Full_Name__c</fullName>
+        <description>Employee Full Name</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na17.salesforce.com/&quot; +Id,  Last_Name__c &amp; &quot;,&quot; &amp; First_Name__c, &quot;_self﻿&quot;)</formula>
+        <inlineHelpText>Employee Full Name</inlineHelpText>
+        <label>Full Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Which Group this employee belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the employee&apos;s group</inlineHelpText>
+        <label>Group</label>
+        <referenceTo>Group__c</referenceTo>
+        <relationshipLabel>Employees</relationshipLabel>
+        <relationshipName>Employees</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>I9_Expiration_Date__c</fullName>
+        <description>I-9 Expiration Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter I-9 expiration date if appropriate (e.g. for work visa employees)</inlineHelpText>
+        <label>I9 Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>I9_Provided__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked if employee has provided proof of employment eligibility</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check if employee has provided proof of employment eligibility</inlineHelpText>
+        <label>I9 Provided</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <description>Employee last name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Employee last name</inlineHelpText>
+        <label>Last Name</label>
+        <length>64</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Employee start date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Employee start date</inlineHelpText>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Employee</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Full_Name__c</columns>
+        <columns>Employee_ID__c</columns>
+        <columns>Group__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>Active__c</columns>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Active_Employees</fullName>
+        <columns>Full_Name__c</columns>
+        <columns>Employee_ID__c</columns>
+        <columns>Group__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>I9_Provided__c</columns>
+        <columns>I9_Expiration_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Active Employees</label>
+    </listViews>
+    <nameField>
+        <displayFormat>EMP-{00000}</displayFormat>
+        <label>Employee Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Employees</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Full_Name__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Full_Name__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Full_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>I9_Date_Check</fullName>
+        <active>true</active>
+        <description>Do not allow I-9 date without checking the I-9 provided checkbox.</description>
+        <errorConditionFormula>OR(
+(
+AND(ISCHANGED( I9_Expiration_Date__c ),
+I9_Provided__c = False)),
+AND(ISBLANK( I9_Expiration_Date__c ),
+I9_Provided__c = True)
+)</errorConditionFormula>
+        <errorMessage>If the I-9 Expiration Date is set, you must also set the I-9 Provided checkbox.</errorMessage>
+    </validationRules>
+</CustomObject>

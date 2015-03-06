@@ -1,0 +1,70 @@
+<apex:page controller="DatePicker" id="lookAheadPage" sidebar="false" showHeader="true" docType="html-5.0" title="CertTracker Reports">
+
+	<style type="text/css">
+        h1 { font-weight: bold; color:green; font-size:200%; margin:10px 10px 30px 10px; padding: 10px 10px 30px 10px;}
+    </style>
+    
+    <head>
+        <apex:stylesheet value="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"  />
+        <apex:includeScript value="https://code.jquery.com/jquery-1.9.1.js" />
+        <apex:includeScript value="https://code.jquery.com/ui/1.10.3/jquery-ui.js" />
+    </head>
+
+    <body>
+        <script type="text/javascript">
+
+            j$ = jQuery.noConflict();
+
+            j$(document).ready(function() {
+                j$( "#reportEndDate" ).datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    changeYear: true,
+                    numberOfMonths: 1,
+                    dateFormat:"mm/dd/yy",
+                    showOn: "button",
+                    showAnim: ""
+                })
+            });
+            
+     </script>
+
+		<!-- <h1>CertTracker Reports</h1> -->
+		<apex:sectionHeader title="CertTracker Reports">
+		</apex:sectionHeader>
+		
+        <apex:form >
+            <apex:pageMessages id="errorMsg" />
+            
+            <apex:pageBlock title="Certification Alerts Report" mode="edit" id="alerts">
+
+			<apex:commandButton value="Run Report" action="https://na17.salesforce.com/00Oo0000001IvpE" />
+			
+            </apex:pageBlock>
+
+            <apex:pageBlock title="All Employee Certification Report" mode="edit" id="all">
+
+			<apex:commandButton value="Run Report" action="https://na17.salesforce.com/00Oo0000001IvPy" />
+			
+            </apex:pageBlock>
+
+            <apex:pageBlock title="Enter Date for Look Ahead Report" mode="edit" id="lookAhead">
+
+                <input type="text" name="reportEndDate" id="reportEndDate" /> 
+
+				<apex:commandButton value="Run Report" action="{!getUrl}" />
+			
+            </apex:pageBlock>
+            
+            <apex:pageBlock title="I-9 Expiration Report" mode="edit" id="i9">
+
+			<apex:commandButton value="Run Report" action="https://na17.salesforce.com/00Oo0000001JP1S" />
+			
+            </apex:pageBlock>
+            
+        </apex:form>
+
+    </body>
+
+
+</apex:page>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CertificationTracking</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CertificationTrackings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Certification Date --></label>
+        <name>Certification_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Certification --></label>
+        <name>Certification__c</name>
+        <relationshipLabel><!-- CertificationTrackings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Employee --></label>
+        <name>Employee__c</name>
+        <relationshipLabel><!-- CertificationTrackings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expired --></label>
+        <name>Expired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Name --></label>
+        <name>Full_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date by which this certification needs to be renewed. --></help>
+        <label><!-- Renewal Date --></label>
+        <name>Renewal_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>CertificationTracking Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Certification Date must be before the Renewal Date --></errorMessage>
+        <name>Cert_Date_Must_Be_Before_Renewal_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Certification Date cannot be in the future (after today). --></errorMessage>
+        <name>Cert_Date_cannot_be_after_today</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Look_Ahead_Report --></label>
+        <name>Look_Ahead_Report</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>CertificationTracking_Compact_Layout</fullName>
+        <fields>Certification__c</fields>
+        <fields>Certification_Date__c</fields>
+        <fields>Renewal_Date__c</fields>
+        <label>CertificationTracking Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>The certifications for each employee.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Certification_Date__c</fullName>
+        <description>The date of the certification</description>
+        <externalId>false</externalId>
+        <label>Certification Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Certification__c</fullName>
+        <description>The Certification this record belongs to</description>
+        <externalId>false</externalId>
+        <label>Certification</label>
+        <referenceTo>Certification__c</referenceTo>
+        <relationshipLabel>CertificationTrackings</relationshipLabel>
+        <relationshipName>CertificationTrackings</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Employee__c</fullName>
+        <description>Employee this record belongs to</description>
+        <externalId>false</externalId>
+        <label>Employee</label>
+        <referenceTo>Employee__c</referenceTo>
+        <relationshipLabel>CertificationTrackings</relationshipLabel>
+        <relationshipName>CertificationTrackings</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Expired__c</fullName>
+        <description>Test to see if this certification is expired</description>
+        <externalId>false</externalId>
+        <formula>IF (Renewal_Date__c &lt; (Today() + 30), &apos;Y&apos;, &apos;N&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expired</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Employee__r.Full_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Date__c</fullName>
+        <defaultValue>Today() + 30</defaultValue>
+        <description>The date by which this certification needs to be renewed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date by which this certification needs to be renewed.</inlineHelpText>
+        <label>Renewal Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>CertificationTracking</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Full_Name__c</columns>
+        <columns>Certification__c</columns>
+        <columns>Certification_Date__c</columns>
+        <columns>Expired__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CTID-{0000}</displayFormat>
+        <label>CertificationTracking ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>CertificationTrackings</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Certification__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Certification_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Renewal_Date__c</customTabListAdditionalFields>
+        <searchFilterFields>Certification__c</searchFilterFields>
+        <searchResultsAdditionalFields>Certification__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Certification_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Renewal_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Cert_Date_Must_Be_Before_Renewal_Date</fullName>
+        <active>false</active>
+        <errorConditionFormula>Certification_Date__c &gt;  Renewal_Date__c</errorConditionFormula>
+        <errorDisplayField>Renewal_Date__c</errorDisplayField>
+        <errorMessage>The Certification Date must be before the Renewal Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cert_Date_cannot_be_after_today</fullName>
+        <active>true</active>
+        <description>The Certification Date cannot be entered in the future.</description>
+        <errorConditionFormula>Certification_Date__c &gt; Today()</errorConditionFormula>
+        <errorMessage>The Certification Date cannot be in the future (after today).</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Look_Ahead_Report</fullName>
+        <availability>online</availability>
+        <description>Button to run the variable look ahead report</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Look Ahead Report</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00Oo0000002qAb9?pv0=&apos;10/1/2014&apos;</url>
+    </webLinks>
+</CustomObject>

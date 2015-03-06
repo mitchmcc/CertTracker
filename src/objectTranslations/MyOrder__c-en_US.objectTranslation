@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>MyOrder</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MyOrders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Reject Detail --></label>
+        <name>Reject_Detail__c</name>
+        <picklistValues>
+            <masterLabel>Account details</masterLabel>
+            <translation><!-- Account details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CSR</masterLabel>
+            <translation><!-- CSR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CSR- Invalid Info</masterLabel>
+            <translation><!-- CSR- Invalid Info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DLR</masterLabel>
+            <translation><!-- DLR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Account/Opportunity</masterLabel>
+            <translation><!-- Duplicate Account/Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate Installations</masterLabel>
+            <translation><!-- Duplicate Installations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fax to Email</masterLabel>
+            <translation><!-- Fax to Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HV Call Flow</masterLabel>
+            <translation><!-- HV Call Flow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HV User List</masterLabel>
+            <translation><!-- HV User List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality Property Assessment</masterLabel>
+            <translation><!-- Hospitality Property Assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICB not defined</masterLabel>
+            <translation><!-- ICB not defined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IP Justification</masterLabel>
+            <translation><!-- IP Justification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IRR</masterLabel>
+            <translation><!-- IRR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Opportunity Type</masterLabel>
+            <translation><!-- Incorrect Opportunity Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect or Incomplete Document</masterLabel>
+            <translation><!-- Incorrect or Incomplete Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid Account #</masterLabel>
+            <translation><!-- Invalid Account # --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid IRR</masterLabel>
+            <translation><!-- Invalid IRR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid Or Incomplete Values</masterLabel>
+            <translation><!-- Invalid Or Incomplete Values --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid Service</masterLabel>
+            <translation><!-- Invalid Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid Service Line Item</masterLabel>
+            <translation><!-- Invalid Service Line Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOA</masterLabel>
+            <translation><!-- LOA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOA Expired</masterLabel>
+            <translation><!-- LOA Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOA- Rate Center Violation</masterLabel>
+            <translation><!-- LOA- Rate Center Violation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing - Invalid Installation Details</masterLabel>
+            <translation><!-- Missing - Invalid Installation Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Approvals</masterLabel>
+            <translation><!-- Missing Approvals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Carl Survey</masterLabel>
+            <translation><!-- Missing Carl Survey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing DnB</masterLabel>
+            <translation><!-- Missing DnB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Documents</masterLabel>
+            <translation><!-- Missing Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Services</masterLabel>
+            <translation><!-- Missing Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Diagram</masterLabel>
+            <translation><!-- Network Diagram --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROE</masterLabel>
+            <translation><!-- ROE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Order</masterLabel>
+            <translation><!-- Service Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Order- Oppty Services Discrepancy</masterLabel>
+            <translation><!-- Service Order- Oppty Services Discrepancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toll Free Resporg</masterLabel>
+            <translation><!-- Toll Free Resporg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trunk Config</masterLabel>
+            <translation><!-- Trunk Config --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trunk Config- Rate Center Violation</masterLabel>
+            <translation><!-- Trunk Config- Rate Center Violation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USF Rider</masterLabel>
+            <translation><!-- USF Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WiFi Design</masterLabel>
+            <translation><!-- WiFi Design --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reject Reason --></label>
+        <name>Reject_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Missing Document</masterLabel>
+            <translation><!-- Missing Document --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

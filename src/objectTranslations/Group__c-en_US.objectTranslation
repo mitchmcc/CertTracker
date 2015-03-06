@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Group</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Groups</value>
+    </caseValues>
+    <fields>
+        <help><!-- Check to make Group active --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Group name abbreviation --></help>
+        <label><!-- Abbreviation --></label>
+        <name>Group_Abbreviation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Group Certifications --></help>
+        <label><!-- Num Group Certs --></label>
+        <name>Num_Group_Certs__c</name>
+    </fields>
+    <layouts>
+        <layout>Group Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Abbreviation must be all uppercase --></errorMessage>
+        <name>Force_Abbrev_Upcase</name>
+    </validationRules>
+</CustomObjectTranslation>

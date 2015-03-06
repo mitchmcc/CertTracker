@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Config Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Config Settings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Require I9 --></label>
+        <name>Require_I9__c</name>
+    </fields>
+    <fields>
+        <help><!-- If set, shows inactive employees --></help>
+        <label><!-- Show Inactive Employees --></label>
+        <name>Show_Inactive_Employees__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

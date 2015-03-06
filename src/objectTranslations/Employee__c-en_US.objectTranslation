@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Employee</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Employees</value>
+    </caseValues>
+    <fields>
+        <help><!-- Check for active employees --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee ID --></label>
+        <name>Employee_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Employee first name --></help>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Employee Full Name --></help>
+        <label><!-- Full Name --></label>
+        <name>Full_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the employee&apos;s group --></help>
+        <label><!-- Group --></label>
+        <name>Group__c</name>
+        <relationshipLabel><!-- Employees --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter I-9 expiration date if appropriate (e.g. for work visa employees) --></help>
+        <label><!-- I9 Expiration Date --></label>
+        <name>I9_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if employee has provided proof of employment eligibility --></help>
+        <label><!-- I9 Provided --></label>
+        <name>I9_Provided__c</name>
+    </fields>
+    <fields>
+        <help><!-- Employee last name --></help>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Employee start date --></help>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Employee Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- If the I-9 Expiration Date is set, you must also set the I-9 Provided checkbox. --></errorMessage>
+        <name>I9_Date_Check</name>
+    </validationRules>
+</CustomObjectTranslation>
